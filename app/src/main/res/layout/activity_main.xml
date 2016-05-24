@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="5"
+        android:stepSize="0.5"
+        android:id="@+id/ratingBar1" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="rating : "
+        android:id="@+id/textView" />
+
+    <!--표시전용,isIndicator가 true면 내가 설정할 수 없다. 읽기 전용 방법1-->
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:rating="2"
+        android:isIndicator="true"
+        android:id="@+id/ratingBar2" />
+
+    <!--style="?android:attr/ratingBarStyleIndicator" 읽기 전용 방법2-->
+    <RatingBar
+        style="?android:attr/ratingBarStyleIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="4"
+        android:rating="2.5"
+        android:id="@+id/ratingBar3" />
+    <!--style을 주면 무조건 읽기 전용-->
+    <RatingBar
+        style="?android:attr/ratingBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="10"
+        android:rating="1"
+        android:id="@+id/ratingBar4" />
+
+
+</LinearLayout>
